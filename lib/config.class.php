@@ -9,6 +9,6 @@ class Config{
     }
 
     public static function set($key, $value){
-        
+        self::$settings[$key] = $value;
     }
 }
