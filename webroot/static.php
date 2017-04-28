@@ -1,0 +1,1 @@
+<?php echo 'это static.php';
