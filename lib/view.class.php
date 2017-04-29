@@ -6,6 +6,7 @@ class  View
     protected $data;
 
     protected $path;
+    
     public static function getDefaultViewPath(){
         $router = App::getRouter();
         if ( !$router ) {

@@ -29,7 +29,7 @@ class App{
         $controller_object = new $controller_class();
         if ( method_exists($controller_object, $controller_method)){
             $view_path = $controller_object->$controller_method();
-            $view_object = new View($controller_object->getData, $view_path);
+            $view_object = new View($controller_object->getData(), $view_path);
             $content = $view_object->render();
 
         } else {
