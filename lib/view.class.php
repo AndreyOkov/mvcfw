@@ -6,7 +6,7 @@ class  View
     protected $data;
 
     protected $path;
-    
+
     public static function getDefaultViewPath(){
         $router = App::getRouter();
         if ( !$router ) {
@@ -14,6 +14,7 @@ class  View
         }
         $controller_dir = $router->getController();
         $template_name = $router->getMethodPrefix().$router->getAction(). '.html';
+
         return VIEWS_PATH.DS.$controller_dir.DS.$template_name;
     }
     public function __construct($data = array(), $path = null)
@@ -35,6 +36,7 @@ class  View
         ob_start();
         include($this->path);
         $content = ob_get_clean();
+
 
         return $content;
     }
